@@ -61,7 +61,7 @@ class UnderscoredClassNamespacePrefix extends UnderscoreNamingStrategy
      */
     public function classToTableName($className)
     {
-        return (($prefix = $this->getTableNamePrefix($className)) ? $prefix . '_' : '') . parent::classToTableName($className);
+        return (($prefix = "sf" . $this->getTableNamePrefix($className)) ? $prefix . '_' : '') . parent::classToTableName($className);
     }
 
     /**
